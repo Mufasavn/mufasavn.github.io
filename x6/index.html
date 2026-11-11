@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>X6 — Keyword research desktop tool</title>
+<meta name="description" content="X6 is a personal desktop tool that shows Google Ads Keyword Planner metrics for the user's own Google Ads account.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header><div class="logo">X6</div><div><h1>X6</h1><p class="sub">Personal keyword research tool for Windows</p></div></header>
+
+  <section>
+    <h2>What X6 is</h2>
+    <p>X6 is a desktop application that runs only on its owner's own Windows computer (it serves its interface on
+      <code>127.0.0.1</code> and is not a web service). It helps one person research advertising keywords for websites they are studying.</p>
+    <p>X6 is a private, non-commercial tool used by its developer. It is not sold, offered to the public, or used to manage anyone else's Google Ads accounts.</p>
+  </section>
+
+  <section>
+    <h2>How X6 uses the Google Ads API</h2>
+    <p>After the user signs in with their own Google account and authorizes X6, the app calls the Google Ads API on the user's own Google Ads account, read-only, to look up keyword planning data:</p>
+    <ul>
+      <li><b>Keyword ideas</b> and <b>historical metrics</b> (<code>KeywordPlanIdeaService</code>): average monthly searches, low / high top-of-page bid, average CPC, competition, and monthly search volumes for the last 12 months.</li>
+      <li>The results are shown to the same user inside the app on their computer.</li>
+    </ul>
+    <p>X6 does <b>not</b> create, change, or pause campaigns, ads, budgets, billing, users, or any other account settings, and it does not access any account the user does not own or manage.</p>
+  </section>
+
+  <section>
+    <h2>Data and security</h2>
+    <ul>
+      <li>OAuth tokens are stored only on the user's computer, encrypted with Windows DPAPI. They are never sent anywhere except to Google.</li>
+      <li>X6 does not have a server and does not collect, sell, or share any data.</li>
+      <li>The user can disconnect at any time in X6 (Settings → Google Ads → Clear) or by removing access at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+    </ul>
+    <p>Read the full <a href="privacy.html">Privacy Policy</a>.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Questions or requests: open an issue at <a href="https://github.com/Mufasavn/mufasavn.github.io/issues">github.com/Mufasavn/mufasavn.github.io/issues</a>.</p>
+  </section>
+
+  <footer><a href="privacy.html">Privacy Policy</a> · Developer: <a href="https://github.com/Mufasavn">Mufasavn</a></footer>
+</main>
+</body>
+</html>
